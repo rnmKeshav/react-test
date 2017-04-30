@@ -6,8 +6,8 @@ var myTitle = React.createClass({
   render: function() {
     return (
       div(null,
-        h1({style:{color: 'red'}},
-          'This is a title'
+        h1({style:{color: this.props.color}},
+          this.props.title
         )
       )
     );
@@ -23,9 +23,9 @@ var myTitle = React.createClass({
 */
 var myFirstComponent = (
   div(null,
-    React.createElement(myTitle, null),
-    React.createElement(myTitle, null),
-    React.createElement(myTitle, null)
+    React.createElement(myTitle, {title: 'My first component', color: 'red'}),
+    React.createElement(myTitle, {title: 'myTitle second instance'}),
+    React.createElement(myTitle, {title: '3rd time my component', color: 'mediumaquamarine'})
   )
 );
 
