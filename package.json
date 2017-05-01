@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "README.md",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
   "devDependencies": {
     "standard": "^10.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack ./src/clientApp.js ./public/bundle.js",
     "start": "standard"
   },
   "repository": {
