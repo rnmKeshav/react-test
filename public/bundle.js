@@ -9584,32 +9584,45 @@ var React = __webpack_require__(50);
 var ReactDOM = __webpack_require__(82);
 var MyTitle = __webpack_require__(81);
 
-var MyFirstComponent = function (_React$Component) {
-  _inherits(MyFirstComponent, _React$Component);
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
 
-  function MyFirstComponent(props) {
-    _classCallCheck(this, MyFirstComponent);
+  function App(props) {
+    _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (MyFirstComponent.__proto__ || Object.getPrototypeOf(MyFirstComponent)).call(this, props));
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
   }
 
-  _createClass(MyFirstComponent, [{
+  _createClass(App, [{
     key: 'render',
     value: function render() {
       return React.createElement(
         'div',
-        null,
-        React.createElement(MyTitle, { title: 'My first component', color: 'red' }),
-        React.createElement(MyTitle, { title: 'myTitle second instance' }),
-        React.createElement(MyTitle, { title: '3rd time my component', color: 'mediumaquamarine' })
+        { className: 'app-container' },
+        React.createElement('div', { className: 'app-background' }),
+        React.createElement(
+          'div',
+          { className: 'searchbox-wrapper u-pos-m-m' },
+          React.createElement(
+            'div',
+            { className: 'search-github-text' },
+            'Search Github user'
+          ),
+          React.createElement('input', { type: 'text', className: 'search-github-input', placeholder: 'Please enter user name' }),
+          React.createElement(
+            'button',
+            { type: 'button', className: 'search-button' },
+            'Search'
+          )
+        )
       );
     }
   }]);
 
-  return MyFirstComponent;
+  return App;
 }(React.Component);
 
-ReactDOM.render(React.createElement(MyFirstComponent, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 /* 84 */
